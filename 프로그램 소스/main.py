@@ -8,6 +8,7 @@ import tensorflow as tf
 import pandas as pd
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import preprocessing
+from NaverAPIIDPW import *
 
 komoran = Komoran()
 
@@ -141,8 +142,8 @@ def ChatBot(InputText):
 
     # 네이버 검색 API ----------------------------------------------------------------------------------
     # 네이버 검색 API 인증 정보
-    client_id = "CuOIdXJEpXjVP_pHajYc"
-    client_secret = "jezGrtdSa3"
+    client_id = NaverClient_id
+    client_secret = NaverSecret
     query = "MBTI " + MBTI_user
 
     if emotions[emo] == "부정":
